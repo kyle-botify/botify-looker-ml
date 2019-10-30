@@ -11,11 +11,20 @@ view: export {
     sql: TIMESTAMP(PARSE_DATE('%Y%m%d', REGEXP_EXTRACT(_TABLE_SUFFIX,r'\d\d\d\d\d\d\d\d')))  ;;
   }
 
-  measure: comment_count {
+  dimension: comment_count {
     type: number
+    hidden: yes
     group_label: "HTML Extracts"
     sql: ${TABLE}.Comment_Count ;;
   }
+
+  measure: total_comment_count {
+    type: sum
+    group_label: "HTML Extracts"
+    sql: ${comment_count} ;;
+  }
+
+
 
   measure: count_inline_related_articles {
     type: number
@@ -85,6 +94,20 @@ view: export {
     tiers: [0,1,2,3,4,5,6,7,8,9,10]
     style: integer
     sql: ${depth} ;;
+  }
+
+  dimension: google_crawls_range{
+    type: tier
+    tiers: [1,]
+    style: integer
+    sql: ${no__of_crawls_from_google__logs_} ;;
+  }
+
+  dimension: organic_visits_range{
+    type: tier
+    tiers: [1,]
+    style: integer
+    sql: ${no__of_visits_from_organic_providers} ;;
   }
 
   dimension: first_h1 {
