@@ -27,6 +27,7 @@ view: export {
   measure: sum_estimated_revenue_from_organic_providers {
     type: sum
     group_label: "Visits"
+    value_format: "$0.00"
     sql: ${estimated_revenue_from_organic_providers} ;;
   }
 
@@ -39,6 +40,7 @@ view: export {
   measure: average__pages_per_session_for_organic_providers {
     type: average
     group_label: "Visits"
+    value_format: "0.0"
     sql: ${avg__pages_per_session_for_organic_providers};;
   }
 
@@ -50,6 +52,7 @@ view: export {
 
   measure: average__session_duration_for_organic_providers {
     type: average
+    value_format: "0s"
     group_label: "Visits"
     sql: ${avg__session_duration_for_organic_providers} ;;
   }
@@ -62,6 +65,7 @@ view: export {
 
   measure: average_bounce_rate_for_organic_providers {
     type: average
+    value_format: "00.0"
     group_label: "Visits"
     sql: ${bounce_rate_for_organic_providers};;
   }
