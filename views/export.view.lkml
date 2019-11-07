@@ -24,10 +24,57 @@ view: export {
     sql: ${comment_count} ;;
   }
 
+  measure: sum_estimated_revenue_from_organic_providers {
+    type: sum
+    group_label: "Visits"
+    sql: ${estimated_revenue_from_organic_providers} ;;
+  }
 
+  dimension: estimated_revenue_from_organic_providers {
+    type: number
+    hidden: yes
+    sql: ${TABLE}.Estimated_Revenue_from_Organic_Providers ;;
+  }
+
+  measure: average__pages_per_session_for_organic_providers {
+    type: average
+    group_label: "Visits"
+    sql: ${avg__pages_per_session_for_organic_providers};;
+  }
+
+  dimension: avg__pages_per_session_for_organic_providers {
+    type: number
+    hidden: yes
+    sql: ${TABLE}.Avg__Pages_per_Session_for_Organic_Providers ;;
+  }
+
+  measure: average__session_duration_for_organic_providers {
+    type: average
+    group_label: "Visits"
+    sql: ${avg__session_duration_for_organic_providers} ;;
+  }
+
+  dimension: avg__session_duration_for_organic_providers {
+    type: number
+    hidden: yes
+    sql: ${TABLE}.Avg__Session_Duration_for_Organic_Providers ;;
+  }
+
+  measure: average_bounce_rate_for_organic_providers {
+    type: average
+    group_label: "Visits"
+    sql: ${bounce_rate_for_organic_providers};;
+  }
+
+  dimension: bounce_rate_for_organic_providers {
+    type: number
+    hidden: yes
+    sql: ${TABLE}.Bounce_Rate_for_Organic_Providers ;;
+  }
 
   measure: count_inline_related_articles {
     type: number
+    group_label: "HTML Extracts"
     sql: ${TABLE}.Count_Inline_Related_Articles ;;
   }
 
@@ -110,6 +157,11 @@ view: export {
     sql: ${no__of_visits_from_organic_providers} ;;
   }
 
+  dimension: active_pages{
+    type: yesno
+    sql: ${no__of_visits_from_organic_providers}>1 ;;
+  }
+
   dimension: first_h1 {
     type: string
     group_label: "Meta Tags"
@@ -181,7 +233,7 @@ view: export {
     group_label: "Meta Tags"
     sql: ${TABLE}.Meta_Description ;;
   }
-
+# comment
   dimension: no__of_crawls_from_bing__logs_ {
     type: number
     sql: ${TABLE}.No__of_Crawls_from_Bing__Logs_ ;;
