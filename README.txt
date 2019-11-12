@@ -1,4 +1,36 @@
-https://www.botify.com
+README 
+
+# Botify Technical SEO Health Dashboard Block
+
+## How to implement this Block
+
+Connect the database of your choosing to your Looker account. Contact your CSM for more information on what data the dashboard uses by default, and which data from the Botify platform can be added. Download the LookML files and drag them into your LookML project, or copy and paste the text.
+
+Rename the connection name in the model file with your own. All the table names need to be updated to your table names as well. If you decided to rename the filenames of explore, model name and view, then please make sure to update all mentions within the other files, else this will result in errors.
+
+[More](https://docs.looker.com/data-modeling/getting-started/model-development)
+
+###### LookML model:
+* Botify_look
+
+###### Dashboards*:
+* botify_technical_health_dashboard
+
+###### Views:
+* export.view
+
+
+<br>
+<u>Dashboards*</u>
+The Dashboard assumes that you are utilizing the full Botify datamodel. If you are not currently using the conversion feature, or Botify Log Analyzer, some of the charts may have errors. 
+
+
+## What if I find an error or discrepancy? Suggestions for improvements?
+If you have feedback for improvements or find any errors, feel free to create a "New Issue" in the github repository for this Block.
+
+Please note that the dashboard you are able to build are entirely dependent on what data you choose to export from Botify. Please discuss with your Botify CSM or Professional Services team to discuss the automated exports feature. 
+
+[Botify](https://www.botify.com)
 
 Copyright 2019
 
