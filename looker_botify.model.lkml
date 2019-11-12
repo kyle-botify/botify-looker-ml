@@ -2,6 +2,7 @@ connection: "botify-uhnd"
 
 # include all the views
 include: "/views/**/*.view"
+include: "*.dashboard"
 
 datagroup: uhnd_look_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
