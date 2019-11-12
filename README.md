@@ -14,7 +14,7 @@ Connect the database of your choosing to your Looker account. Contact your CSM f
 
 Download the LookML files and drag them into your LookML project, or copy and paste the text.
 
-Rename the connection name in the model file with your own. All the table names need to be updated to your table names as well. If you decided to rename the filenames of explore, model name and view, then please make sure to update all mentions within the other files, else this will result in errors.
+Rename the `connection_name` and `schema_name` constants in the manifest file (`manifest.lkml`) with your own. If you decided to rename the filenames of explore, model name and view, then please make sure to update all mentions within the other files, else this will result in errors.
 
 [More on Developing Looker Models](https://docs.looker.com/data-modeling/getting-started/model-development)
 

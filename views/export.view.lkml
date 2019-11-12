@@ -1,5 +1,5 @@
 view: export {
-  sql_table_name: `uhnd_exports.export_*` ;;
+  sql_table_name: `@{SCHEMA_NAME}.export_*` ;;
 
   dimension: partition_month_string {
     type: string
