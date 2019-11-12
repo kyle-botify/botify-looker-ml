@@ -20,47 +20,6 @@
     col: 4
     width: 20
     height: 3
-  - title: Crawl History
-    name: Crawl History
-    model: looker_botify
-    explore: export
-    type: table
-    fields: [export.partition_date, export.count, export.sum_no__of_crawls_from_google__logs_,
-      export.sum_no__of_crawls_from_bing__logs_, export.sum_no__of_visits_from_organic_providers]
-    filters:
-      export.partition_date: 60 days
-    sorts: [export.partition_date desc]
-    limit: 500
-    color_application:
-      collection_id: 5b121cce-cf79-457c-a52a-9162dc174766
-      palette_id: 55dee055-18cf-4472-9669-469322a6f264
-    show_view_names: false
-    show_row_numbers: false
-    truncate_column_names: false
-    hide_totals: false
-    hide_row_totals: false
-    series_labels:
-      export.partition_date: Crawl Date
-      export.count: URLs
-      export.sum_no__of_crawls_from_google__logs_: Crawls from Google
-      export.sum_no__of_crawls_from_bing__logs_: Crawls from Bing
-      export.sum_no__of_visits_from_organic_providers: Organic Visits
-    table_theme: gray
-    limit_displayed_rows: false
-    enable_conditional_formatting: true
-    conditional_formatting: [{type: along a scale..., value: !!null '', background_color: "#462C9D",
-        font_color: !!null '', color_application: {collection_id: 5b121cce-cf79-457c-a52a-9162dc174766,
-          palette_id: 12809dc5-ac61-4801-8878-10c61fb43c60}, bold: false, italic: false,
-        strikethrough: false, fields: [export.sum_no__of_visits_from_organic_providers]}]
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    series_types: {}
-    listen:
-      Pagetype: export.pagetype
-    row: 29
-    col: 0
-    width: 24
-    height: 6
   - title: Untitled (copy)
     name: Untitled (copy)
     model: looker_botify
@@ -640,6 +599,47 @@
     row: 23
     col: 12
     width: 12
+    height: 6
+  - title: Crawl History
+    name: Crawl History
+    model: looker_botify
+    explore: export
+    type: looker_grid
+    fields: [export.partition_date, export.count, export.sum_no__of_crawls_from_google__logs_,
+      export.sum_no__of_crawls_from_bing__logs_, export.sum_no__of_visits_from_organic_providers]
+    filters:
+      export.partition_date: 60 days
+    sorts: [export.partition_date desc]
+    limit: 500
+    color_application:
+      collection_id: 5b121cce-cf79-457c-a52a-9162dc174766
+      palette_id: 55dee055-18cf-4472-9669-469322a6f264
+    show_view_names: false
+    show_row_numbers: false
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    series_labels:
+      export.partition_date: Crawl Date
+      export.count: URLs
+      export.sum_no__of_crawls_from_google__logs_: Crawls from Google
+      export.sum_no__of_crawls_from_bing__logs_: Crawls from Bing
+      export.sum_no__of_visits_from_organic_providers: Organic Visits
+    table_theme: gray
+    limit_displayed_rows: false
+    enable_conditional_formatting: true
+    conditional_formatting: [{type: along a scale..., value: !!null '', background_color: "#462C9D",
+        font_color: !!null '', color_application: {collection_id: 5b121cce-cf79-457c-a52a-9162dc174766,
+          palette_id: 12809dc5-ac61-4801-8878-10c61fb43c60}, bold: false, italic: false,
+        strikethrough: false, fields: [export.sum_no__of_visits_from_organic_providers]}]
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    series_types: {}
+    listen:
+      Pagetype: export.pagetype
+    row: 29
+    col: 0
+    width: 24
     height: 6
   filters:
   - name: Crawl Date
