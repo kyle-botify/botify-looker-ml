@@ -11,19 +11,6 @@ view: export {
     sql: TIMESTAMP(PARSE_DATE('%Y%m%d', REGEXP_EXTRACT(_TABLE_SUFFIX,r'\d\d\d\d\d\d\d\d')))  ;;
   }
 
-  dimension: comment_count {
-    type: number
-    hidden: yes
-    group_label: "HTML Extracts"
-    sql: ${TABLE}.Comment_Count ;;
-  }
-
-  measure: total_comment_count {
-    type: sum
-    group_label: "HTML Extracts"
-    sql: ${comment_count} ;;
-  }
-
   measure: sum_estimated_revenue_from_organic_providers {
     type: sum
     group_label: "Visits"
@@ -77,11 +64,6 @@ view: export {
     sql: ${TABLE}.Bounce_Rate_for_Organic_Providers ;;
   }
 
-  measure: count_inline_related_articles {
-    type: number
-    group_label: "HTML Extracts"
-    sql: ${TABLE}.Count_Inline_Related_Articles ;;
-  }
 
   dimension_group: crawl {
     type: time
@@ -355,11 +337,6 @@ view: export {
     sql: ${TABLE}.pagetype ;;
   }
 
-  measure: post_count_in_archive {
-    type: number
-    group_label: "HTML Extracts"
-    sql: ${TABLE}.Post_Count_in_Archive ;;
-  }
 
   dimension: title {
     type: string
