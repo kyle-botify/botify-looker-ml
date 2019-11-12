@@ -63,6 +63,7 @@ view: export {
     sql: ${TABLE}.Avg__Session_Duration_for_Organic_Providers ;;
   }
 
+
   measure: average_bounce_rate_for_organic_providers {
     type: average
     value_format: "00.0"
