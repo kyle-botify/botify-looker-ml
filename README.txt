@@ -1,5 +1,3 @@
-README 
-
 # Botify Technical SEO Health Dashboard Block
 
 ## How to implement this Block
