@@ -22,6 +22,7 @@ view: export {
     type: sum
     group_label: "HTML Extracts"
     sql: ${comment_count} ;;
+    drill_fields: [detail*]
   }
 
   measure: sum_estimated_revenue_from_organic_providers {
@@ -29,6 +30,7 @@ view: export {
     group_label: "Visits"
     value_format: "$0.00"
     sql: ${estimated_revenue_from_organic_providers} ;;
+    drill_fields: [detail*]
   }
 
   dimension: estimated_revenue_from_organic_providers {
@@ -42,6 +44,7 @@ view: export {
     group_label: "Visits"
     value_format: "0.0"
     sql: ${avg__pages_per_session_for_organic_providers};;
+    drill_fields: [detail*]
   }
 
   dimension: avg__pages_per_session_for_organic_providers {
@@ -55,6 +58,7 @@ view: export {
     value_format: "0s"
     group_label: "Visits"
     sql: ${avg__session_duration_for_organic_providers} ;;
+    drill_fields: [detail*]
   }
 
   dimension: avg__session_duration_for_organic_providers {
@@ -69,6 +73,7 @@ view: export {
     value_format: "00.0"
     group_label: "Visits"
     sql: ${bounce_rate_for_organic_providers};;
+    drill_fields: [detail*]
   }
 
   dimension: bounce_rate_for_organic_providers {
@@ -81,6 +86,7 @@ view: export {
     type: number
     group_label: "HTML Extracts"
     sql: ${TABLE}.Count_Inline_Related_Articles ;;
+    drill_fields: [detail*]
   }
 
   dimension_group: crawl {
@@ -122,6 +128,7 @@ view: export {
     type: average
     value_format: "0"
     sql: ${delay_first_byte_received} ;;
+    drill_fields: [detail*]
   }
 
   dimension: delay_total {
@@ -134,6 +141,7 @@ view: export {
     type: average
     value_format: "0"
     sql: ${delay_total} ;;
+    drill_fields: [detail*]
   }
 
   dimension: depth {
@@ -210,6 +218,7 @@ view: export {
     type: sum
     value_format: "0.0"
     sql: ${internal_pagerank} ;;
+    drill_fields: [detail*]
   }
 
   dimension: internal_pagerank_position {
@@ -221,6 +230,7 @@ view: export {
     type: average
     value_format: "0.00"
     sql: ${internal_pagerank_position} ;;
+    drill_fields: [detail*]
   }
 
   dimension: is_compliant {
@@ -247,6 +257,7 @@ view: export {
   measure: sum_no__of_crawls_from_bing__logs_ {
     type: sum
     sql: ${no__of_crawls_from_bing__logs_} ;;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_crawls_from_google__logs_ {
@@ -258,6 +269,7 @@ view: export {
   measure: sum_no__of_crawls_from_google__logs_ {
     type: sum
     sql: ${no__of_crawls_from_google__logs_} ;;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_internal_follow_inlinks__from_distinct_urls_ {
@@ -269,6 +281,7 @@ view: export {
   measure: sum_no__of_internal_follow_inlinks__from_distinct_urls_ {
     type: sum
     sql: ${no__of_internal_follow_inlinks__from_distinct_urls_} ;;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_internal_follow_outlinks__to_distinct_urls_ {
@@ -280,6 +293,7 @@ view: export {
   measure: sum_no__of_internal_follow_outlinks__to_distinct_urls_ {
     type: sum
     sql: ${no__of_internal_follow_outlinks__to_distinct_urls_} ;;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_internal_no_follow_outlinks__to_distinct_urls_ {
@@ -291,6 +305,7 @@ view: export {
   measure: sum_no__of_internal_no_follow_outlinks__to_distinct_urls_ {
     type: sum
     sql: ${no__of_internal_no_follow_outlinks__to_distinct_urls_} ;;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_internal_outlinks__to_distinct_urls_ {
@@ -302,6 +317,7 @@ view: export {
   measure: sum_no__of_internal_outlinks__to_distinct_urls_ {
     type: sum
     sql: ${no__of_internal_outlinks__to_distinct_urls_};;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_visits_from_organic_providers {
@@ -313,6 +329,7 @@ view: export {
   measure: sum_no__of_visits_from_organic_providers {
     type: sum
     sql: ${no__of_visits_from_organic_providers} ;;
+    drill_fields: [detail*]
   }
 
   dimension: no__of_visits_from_social_providers {
@@ -324,6 +341,7 @@ view: export {
   measure: sum_no__of_visits_from_social_providers {
     type: sum
     sql: ${no__of_visits_from_social_providers} ;;
+    drill_fields: [detail*]
   }
 
   dimension: non_compliance_reason_is_bad_content_type {
@@ -369,6 +387,10 @@ view: export {
 
   measure: count {
     type: count
-    drill_fields: [full_url,http_status_code]
+    drill_fields: [detail*]
+  }
+
+  set: detail {
+    fields: [full_url,http_status_code]
   }
 }
