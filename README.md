@@ -2,7 +2,7 @@
 
 ## How to implement this Block
 
-Connect the database of your choosing to your Looker account. Contact your CSM for more information on automating the export of Botify data to your database of choice. Use the file bql.json to get an idea of what data the dashboard uses by default, and which data from the Botify platform can be added. Feel free to work with your Botify account team on adding or removing datapoints to the export.  
+Connect the database of your choosing to your Looker account. Contact your CSM for more information on automating the export of Botify data to your database of choice. Use the file [bql.json](https://github.com/kyle-botify/botify-looker-ml/blob/master/bql.json) to get an idea of which fields the dashboard uses by default, and which data from the Botify platform can be added. Feel free to work with your Botify account team on adding or removing datapoints to the export.  
 
 Download the LookML files and drag them into your LookML project, or copy and paste the text.
 
