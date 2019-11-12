@@ -1,0 +1,55 @@
+{
+	"fields": [
+		"url",
+		"main_image",
+		"internal_page_rank.position",
+		"outlinks_internal.nb.unique",
+		"metadata.h1.first",
+		{
+			"function": "to_json_string",
+			"args": [
+				"metadata.h2.contents"
+			],
+			"name": "metadata.h2.list"
+		},
+		{
+			"function": "to_json_string",
+			"args": [
+				"metadata.h3.contents"
+			],
+			"name": "metadata.h3.list"
+		},
+		"date_crawled",
+		"segments.pagetype.value",
+		"compliant.reason.noindex",
+		"inlinks_internal.nb.follow.unique",
+		"delay_last_byte",
+		"compliant.reason.canonical",
+		"search_engines.google.crawls.count",
+		"metadata.title.content",
+		"search_engines.bing.crawls.count",
+		"compliant.is_compliant",
+		"metadata.description.content",
+		"compliant.reason.http_code",
+		"visits.social.all.nb",
+		"visits.organic.all.nb",
+		"outlinks_internal.nb.nofollow.unique",
+		"internal_page_rank.value",
+		"delay_first_byte",
+		"outlinks_internal.nb.follow.unique",
+		"depth",
+		"sitemaps.present",
+		"http_code",
+		"compliant.reason.content_type",
+		"scoring.issues.description_len",
+		"scoring.issues.very_slow_load_time_compliant",
+		"scoring.issues.title_len",
+		"scoring.issues.slow_load_time_compliant",
+		"scoring.issues.inlinks_compliant_lt_5",
+		"scoring.issues.too_many_inlinks_3xx",
+		"scoring.issues.inlinks_compliant_only_1",
+		"scoring.issues.canonical_to_bad_canonical",
+		"scoring.issues.canonical_to_no_index",
+		"scoring.issues.h1_duplicated"
+	]
+}
