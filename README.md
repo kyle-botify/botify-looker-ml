@@ -6,7 +6,7 @@ Connect the database of your choosing to your Looker account. Contact your CSM f
 
 Rename the connection name in the model file with your own. All the table names need to be updated to your table names as well. If you decided to rename the filenames of explore, model name and view, then please make sure to update all mentions within the other files, else this will result in errors.
 
-[More](https://docs.looker.com/data-modeling/getting-started/model-development)
+[More on Developing Looker Models](https://docs.looker.com/data-modeling/getting-started/model-development)
 
 ###### LookML model:
 * Botify_look
