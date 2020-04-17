@@ -184,6 +184,10 @@ view: export {
   dimension: full_url {
     type: string
     sql: ${TABLE}.Full_URL ;;
+    link: {
+      label: "Go to link."
+      url: "{{value}}"
+    }
   }
 
   dimension: h2__json_ {
